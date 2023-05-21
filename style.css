@@ -1,0 +1,1060 @@
+
+
+/*! HTML5 Boilerplate v7.3.0 | MIT License | https://html5boilerplate.com/ */
+
+/* main.css 2.0.0 | MIT License | https://github.com/h5bp/main.css#readme */
+/*
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+
+/*font-import*/
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,800&display=swap');
+
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+
+html {
+  color: #222;
+  font-size: 1em;
+  line-height: 1.4;
+  font-family: 'Jost', sans-serif;
+}
+body{
+  font-family: 'Jost', sans-serif;
+}
+
+/*
+ * Remove text-shadow in selection highlight:
+ * https://twitter.com/miketaylr/status/12228805301
+ *
+ * Vendor-prefixed and regular ::selection selectors cannot be combined:
+ * https://stackoverflow.com/a/16982510/7133471
+ *
+ * Customize the background color to match your design.
+ */
+
+::-moz-selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+::selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+/*
+ * A better looking default horizontal rule
+ */
+
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0;
+}
+
+/*
+ * Remove the gap between audio, canvas, iframes,
+ * images, videos and the bottom of their containers:
+ * https://github.com/h5bp/html5-boilerplate/issues/440
+ */
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+  vertical-align: middle;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+textarea {
+  resize: vertical;
+}
+
+/* ==========================================================================
+   Browser Upgrade Prompt
+   ========================================================================== */
+
+.browserupgrade {
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0;
+}
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+/*
+ * Hide visually and from screen readers
+ */
+
+.hidden {
+  display: none !important;
+}
+
+/*
+* Hide only visually, but have it available for screen readers:
+* https://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+*
+* 1. For long content, line feeds are not interpreted as spaces and small width
+*    causes content to wrap 1 word per line:
+*    https://medium.com/@jessebeach/beware-smushed-off-screen-accessible-text-5952a4c2cbfe
+*/
+
+.sr-only {
+  border: 0;
+  clip: rect(0, 0, 0, 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  /* 1 */
+}
+
+/*
+* Extends the .sr-only class to allow the element
+* to be focusable when navigated to via the keyboard:
+* https://www.drupal.org/node/897638
+*/
+
+.sr-only.focusable:active,
+.sr-only.focusable:focus {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  white-space: inherit;
+  width: auto;
+}
+
+/*
+* Hide visually and from screen readers, but maintain layout
+*/
+
+.invisible {
+  visibility: hidden;
+}
+
+/*
+* Clearfix: contain floats
+*
+* For modern browsers
+* 1. The space content is one way to avoid an Opera bug when the
+*    `contenteditable` attribute is included anywhere else in the document.
+*    Otherwise it causes space to appear at the top and bottom of elements
+*    that receive the `clearfix` class.
+* 2. The use of `table` rather than `block` is only necessary if using
+*    `:before` to contain the top-margins of child elements.
+*/
+
+.clearfix:before,
+.clearfix:after {
+  content: " ";
+  /* 1 */
+  display: table;
+  /* 2 */
+}
+
+.clearfix:after {
+  clear: both;
+}
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   These examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+
+@media only screen and (min-width: 35em) {
+  /* Style adjustments for viewports that meet the condition */
+}
+
+@media print,
+  (-webkit-min-device-pixel-ratio: 1.25),
+  (min-resolution: 1.25dppx),
+  (min-resolution: 120dpi) {
+  /* Style adjustments for high resolution devices */
+}
+
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid the additional HTTP request:
+   https://www.phpied.com/delay-loading-your-print-css/
+   ========================================================================== */
+
+@media print {
+  *,
+  *:before,
+  *:after {
+    background: transparent !important;
+    color: #000 !important;
+    /* Black prints faster */
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+  a,
+  a:visited {
+    text-decoration: underline;
+  }
+  a[href]:after {
+    content: " (" attr(href) ")";
+  }
+  abbr[title]:after {
+    content: " (" attr(title) ")";
+  }
+  /*
+     * Don't show links that are fragment identifiers,
+     * or use the `javascript:` pseudo protocol
+     */
+  a[href^="#"]:after,
+  a[href^="javascript:"]:after {
+    content: "";
+  }
+  pre {
+    white-space: pre-wrap !important;
+  }
+  pre,
+  blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid;
+  }
+  /*
+     * Printing Tables:
+     * https://web.archive.org/web/20180815150934/http://css-discuss.incutio.com/wiki/Printing_Tables
+     */
+  thead {
+    display: table-header-group;
+  }
+  tr,
+  img {
+    page-break-inside: avoid;
+  }
+  p,
+  h2,
+  h3 {
+    orphans: 3;
+    widows: 3;
+  }
+  h2,
+  h3 {
+    page-break-after: avoid;
+  }
+}
+/*REUSEABLE COMPONENTS*/
+.btn-signup{
+  background: #C41432;
+  text-transform: uppercase;
+  font-size: 15px;
+  color: #fff;
+  padding: 10px 35px;
+}
+a:hover{
+  text-decoration: none;
+}
+h1{
+  font-size: 65px;
+  font-weight: bold;
+}
+h2{
+  font-size: 45px;
+  font-weight: bold;
+  color: #283B5C;
+}
+h3{
+  font-size: 23px;
+  font-weight: bold;
+  color: #283B5C;
+}
+h4{
+  font-size: 18px;
+  font-weight: bold;
+  color: #283B5C;
+}
+.btn-default{
+  display: inline-block;
+  padding: 15px 30px;
+  background-color: #3BD499;
+  text-transform: uppercase;
+  color: #fff;
+  font-weight: 500;
+  font-size: 18px;
+}
+.btn-default:hover{
+  color: #fff;
+}
+.border-both-side{
+  margin-bottom: 50px;
+}
+.border-both-side:after{
+  content: '';
+  width: 80px;
+  height: 1px;
+  background-color: #283B5C;
+  vertical-align: middle;
+  display: inline-block;
+}
+.border-both-side:before{
+  content: '';
+  width: 80px;
+  height: 1px;
+  background-color: #283B5C;
+  vertical-align: middle;
+  display: inline-block;
+}
+.border-both-side img{
+  width: 30px;
+  vertical-align: middle;
+  margin: 0 15px;
+}
+body{
+  color: #717D94;
+  font-size: 18px;
+}
+/*REUSEABLE COMPONENTS*/
+
+
+/*========================
+    HOME PAGE STYLE START
+==========================*/
+
+/*HEADER PART START*/
+header {
+  background: url('assets/img/Bg.png') no-repeat center center;
+  background-size: 100% 100% !important;
+  padding-bottom: 100px;
+  padding-top: 50px;
+}
+header .nav-item{
+  padding-left: 20px;
+}
+header .nav-link{
+  color: #fff;
+  font-size: 16px;
+}
+nav{
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+header .hero-part{
+  padding: 150px 0;
+}
+header .hero-part .hero-part-left-text{}
+header .hero-part .hero-part-left-text h1{
+  color: #fff;
+}
+header .hero-part .hero-part-left-text p{
+  font-size: 25px;
+  color: #fff;
+  margin: 30px 0px;
+}
+header .hero-part .hero-part-left-text a{}
+header .hero-part .hero-part-right{}
+header .hero-part .hero-part-right img{
+  max-width: 700px;
+  position: relative;
+  left: 0;
+  top: 0;
+}
+.sign-up-btn{
+  padding-left: 30px;
+}
+.btn-signup:hover{
+  color: #fff;
+}
+/*HEADER PART FINISH*/
+
+/*SECTION-1 CART PROTECTION PART START*/
+.section-1{
+  padding: 100px 0;
+}
+.section-1-top-part{
+  padding: 0 220px;
+}
+.section-1-top-part h2{}
+.section-1-top-part p{
+  padding: 30px 0;
+}
+.section-1-top-part .border-both-side{}
+.card-protection-column{}
+.card-protection-column img{
+  width: 90px;
+}
+.card-protection-column h3{
+  padding-bottom: 20px;
+  padding-top: 20px;
+}
+.card-protection-column p{}
+/*SECTION-1 CART PROTECTION PART FINISH*/
+
+/*SECTION-2 PART START*/
+.section-2{
+  padding-bottom: 300px;
+}
+.section-2 .section-2-left-part {
+    position: absolute;
+    left: -180px;
+    top: 0;
+}
+.section-2 .section-2-left-part .custom-column{
+  padding-right: 30px;
+}
+.section-2 .section-2-left-part .custom-column:last-child{
+  padding-right: 0;
+}
+.section-2 .section-2-left-part .custom-column .same-column {
+    width: 220px;
+    background-color: #fff;
+    box-shadow: 5px 5px 30px 0px #00000036;
+    padding: 25px 15px;
+    margin-bottom: 30px;
+}
+.section-2 .section-2-left-part .custom-column .same-column img{
+  width: 50px;
+  margin-bottom: 20px;
+}
+.section-2 .section-2-left-part .custom-column .same-column h4{}
+.section-2 .section-2-left-part .custom-column .same-column p{
+  font-size: 13px;
+}
+.section-2 .section-2-left-part .custom-column.column-1st{
+  margin-top: 80px;
+}
+.section-2 .section-2-left-part .custom-column.column-2nd{}
+.section-2 .section-2-left-part .custom-column.column-3rd{
+  margin-top: 150px;
+}
+.section-2-right-part h2{
+  margin-bottom: 30px;
+}
+/*SECTION-2 PART FINISH*/
+
+/*SECTION-3 PART START*/
+.section-3{
+  padding: 150px 0;
+}
+.section-3.gray_bg{
+  background: #F5F7F9;
+}
+.section-3-left-part h2{
+  margin-bottom: 30px;
+}
+.section-3-left-part a{
+  margin-top: 30px;
+}
+.section-3-right{}
+.section-3-right img{
+  max-width: 720px;
+  position: absolute;
+  left: 30px;
+  top: 0;
+}
+/*SECTION-3 PART FINISH*/
+
+/*SECTION-4 PART START*/
+.section-4{
+  padding: 300px 0 400px 0;
+}
+.section-4-left-part{}
+.section-4-left-part img{
+  position: absolute;
+  right: 50px;
+  top: 0;
+  max-width: 620px;
+}
+.section-4-right-part{}
+.section-4-right-part h2{
+  margin-bottom: 30px;
+}
+.section-4-right-part ul li span{
+  font-weight: bold;
+  color: #3BD499;
+}
+.section-4-right-part ul li{
+  margin-bottom: 10px;
+}
+/*SECTION-4 PART FINISH*/
+
+/*SECTION-5 PART START*/
+.section-5{
+  padding: 100px 0;
+  background: url('assets/img/Background.png') no-repeat;
+  background-size: 100%;
+  background-position: left top;
+  color: #fff !important;
+}
+.section-5-left-part img{
+  margin-bottom: 20px;
+}
+.section-5-left-part h2{
+  color: #fff;
+  padding: 20px 0;
+}
+.section-5-left-part p:first-child{}
+.section-5-right-part{}
+.section-5-right-part img{
+  position: absolute;
+  right: 0px;
+  max-width: 800px;
+  top: -28%;
+}
+.download-part{
+  padding-top: 20px;
+}
+.download-part .download-link{
+  flex-basis: 49%;
+  width: 49%;
+  background-color: #fff;
+  margin-right: 30px;
+  text-align: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.download-part .download-link:last-child{
+  margin-right: 0;
+}
+.download-part .download-link a{
+  font-weight: bold;
+  font-size: 16px;
+  font-weight: bold;
+  color: #283B5C;
+  display: inline-block;
+}
+.download-part .download-link img{
+  margin-bottom: 0;
+  width: 50px;
+  margin-left: 15px;
+}
+/*SECTION-5 PART FINISH*/
+
+/*FOOTER PART START*/
+footer{
+  padding-top: 150px;
+  background-color: #072039;
+  color: #fff;
+}
+.footer_column_1 img{
+  margin-bottom: 50px;
+}
+.footer_column_1 .contact_info{
+  margin-bottom: 30px;
+}
+.footer_column_1 .contact_info .icon{
+  width: 50px;
+  height: 50px;
+  background-color: #0E3B48;
+  color: #3BD499;
+  font-size: 20px;
+  line-height: 50px;
+  text-align: center;
+  border-radius: 50px;
+  margin-right: 20px;
+}
+.footer_column_1 .contact_info .contact-details{}
+.footer_column_1 .contact_info .contact-details p{
+  margin-bottom: 0;
+  font-size: 16px;
+  font-weight: bold;
+}
+.footer_column_1 .contact_info .contact-details a{
+  color: #fff;
+  font-size: 25px;
+}
+.footer_column_2{}
+.footer_column_2 h3{
+  color: #fff;
+  margin-bottom: 50px;
+}
+.footer_column_2 .usefull_link{}
+.footer_column_2 .usefull_link .link_column{
+  padding-right: 30px;
+}
+.footer_column_2 .usefull_link .link_column:last-child{
+  padding-right: 0;
+}
+.footer_column_2 .usefull_link .link_column li{
+  padding-bottom: 10px;
+}
+.footer_column_2 .usefull_link .link_column li a{
+  color: #fff;
+  font-size: 18px;
+  font-weight: normal;
+}
+.footer_column_2 .usefull_link .link_column li a:hover{
+  text-decoration: underline;
+}
+.footer_column_3{}
+.footer_column_3 h3{
+  color: #fff;
+  margin-bottom: 50px;
+}
+.footer_column_3 p{
+  margin-bottom: 30px;
+}
+.footer_column_3 form{
+  position: relative;
+  margin-bottom: 30px;
+}
+.footer_column_3 form input{
+  width: 100%;
+  height: 50px;
+  border: 1px solid #fff;
+  background-color: #142B43;
+  padding-left: 20px !important;
+  padding: 10px;
+  color: #fff;
+}
+.footer_column_3 form input::placeholder{
+  color: #fff;
+}
+.footer_column_3 form input:focus{
+  outline: none;
+}
+.footer_column_3 form button{
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  border: 0;
+  transform: translateY(-50%);
+  background-color: transparent;
+  padding: 0;
+  cursor: pointer;
+}
+.footer_column_3 form button:focus{
+  outline: none;
+}
+.footer_column_3 ul{}
+.footer_column_3 ul li{
+  display: inline-block;
+}
+.footer_column_3 ul li a{
+  color: #fff;
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  border-radius: 50px;
+  margin-right: 10px;
+  text-align: center;
+}
+.footer_column_3 ul li:last-child a{
+  margin-right: 0;
+}
+.facebook{
+  background-color: #3B5998;
+}
+.instagram{
+  background-color: #E1306C;
+}
+.twitter{
+  background-color: #1DA1F2;
+}
+.yotube{
+  background-color: #E93C3C;
+}
+footer > p{
+  margin-bottom: 0;
+  padding: 20px 0;
+  background-color: #041C34;
+  font-size: 16px;
+}
+footer > p a{
+  color: #fff;
+}
+footer > p a:hover{
+  color: #fff;
+  text-decoration: underline;
+}
+/*FOOTER PART FINISH*/
+
+
+/*========================
+    HOME PAGE STYLE FINISH
+==========================*/
+
+
+
+/*========================
+    FEES PAGE PART START
+==========================*/
+
+/*HEADER PART START*/
+.fees-page_background{
+  background: url('assets/img/fee-page/Bg.png') no-repeat !important;
+  background-size: 100% 100% !important;
+}
+.fees-page_background .hero-part{
+   padding: 100px 0;
+}
+
+/*HEADER PART FINISH*/
+
+/*FEES PAGE SECTION 1 PART START*/
+.fees-page-section-1{
+  padding-bottom: 300px;
+  padding-top: 100px;
+}
+.fees-page-section-1 .fees_page_row{}
+.fees-page-section-1 .fees_page_row table{}
+.fees-page-section-1 .fees_page_row table thead{
+  background: #F0ECFF;
+}
+.fees-page-section-1 .fees_page_row table thead tr{}
+.fees-page-section-1 .fees_page_row table thead tr th {
+    padding: 15px 20px;
+    border: 1px solid #D4C8FF;
+    font-size: 25px;
+}
+.fees-page-section-1 .fees_page_row table tbody{}
+.fees-page-section-1 .fees_page_row table tbody tr{}
+.fees-page-section-1 .fees_page_row table tr td{
+  border: 1px solid #D4C8FF;
+  padding: 15px 20px;
+  font-size: 18px;
+}
+/*FEES PAGE SECTION 1 PART FINISH*/
+
+
+/*========================
+    FEES PAGE PART FINISH
+==========================*/
+
+
+
+/*========================
+    FAQ PAGE PART START
+==========================*/
+
+/*HEADER PART START*/
+.faq_page{}
+.faq_page .hero-part{}
+.faq_page .hero-part .hero-part-left-text{}
+.faq_page .hero-part .hero-part-left-text form{
+  position: relative;
+}
+.faq_page .hero-part .hero-part-left-text form input{
+  height: 70px;
+  width: 50%;
+  background-color: #fff;
+  border: none;
+  padding-left: 55px;
+  margin-right: 20px;
+}
+.faq_page .hero-part .hero-part-left-text form:before{
+  content: '';
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  background-image: url('assets/img/magnifiying-glass.png');
+  background-repeat: no-repeat;
+}
+input:focus{
+  outline: none;
+}
+.faq_page .hero-part .hero-part-left-text form button{
+  width: 30%;
+  height: 70px;
+  background-color: #3BD499;
+  color: #fff;
+  border: none;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+button:focus{
+  outline: none;
+}
+.faq_page .hero-part .hero-part-left-text form:before {
+    content: '';
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    background-image: url('assets/img/magnifiying-glass.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+/*HEADER PART FINISH*/
+
+
+/*FAQ SECTION 1 PART START*/
+.faq-section-1{
+  padding-top: 100px;
+  padding-bottom: 300px;
+}
+.faq-section-1 .faq-section-1-top{
+  padding-bottom: 30px;
+}
+.faq-section-1 .faq-section-1-top h2{}
+.faq-section-1 .faq-section-1-top p{}
+.faq-section-1 #accordion{}
+.faq-section-1 #accordion .card {
+    border: none;
+    margin-bottom: 20px;
+}
+.faq-section-1 #accordion .card .card-header {
+    background: #F8F6FF;
+    border: none;
+}
+.faq-section-1 #accordion .card .card-header h5{
+  position: relative;
+}
+.faq-section-1 #accordion .card .card-header h5:after {
+    content: '';
+    width: 20px;
+    height: 20px;
+    background-image: url('assets/img/double-up-arrow.png');
+    display: inline-block;
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+    right: 0;
+    top: 12px;
+}
+.faq-section-1 #accordion .card .card-header button {
+    font-size: 23px;
+    font-weight: bold;
+    color: #283B5C;
+}
+.faq-section-1 #accordion .card .card-header button:hover{
+  text-decoration: none;
+}
+.faq-section-1 #accordion .card .card-header button:focus{
+  text-decoration: none;
+}
+.faq-section-1 #accordion .card .collapse{}
+.faq-section-1 #accordion .card .collapse .card-body {
+    background: #F8F6FF;
+    color: #717D94;
+}
+.faq-section-1 .collapse.show:after {
+    content: '';
+    width: 44px;
+    height: 44px;
+    background-image: url('assets/img/active-arrow.png');
+    display: inline-block;
+    background-size: 45%;
+    background-repeat: no-repeat;
+    position: absolute;
+    right: 9px;
+    background-position: center center;
+    top: 12px;
+    background-color: #F8F6FF;
+}
+/*FAQ SECTION 1 PART FINISH*/
+
+/*========================
+    FAQ PAGE PART FINISH
+==========================*/
+
+
+/*========================
+    TOW PAGE PART START
+==========================*/
+
+.py_100_and_300{
+  padding-top: 100px;
+  padding-bottom: 300px;
+}
+.tos_page_row ul li{
+  padding-bottom: 15px;
+}
+.tos_page_row a{
+  color: #717D94;
+}
+.tos_page_row h2 img{
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/*========================
+    TOW PAGE PART FINISH
+==========================*/
+
+
+/*========================
+    PRIVACY PAGE PART START
+==========================*/
+
+.privacy_row ul li{
+  padding-bottom: 15px;
+}
+.privacy_row table{}
+.privacy_row table thead{
+  background-color: #F0ECFF;
+}
+.privacy_row table thead tr{}
+.privacy_row table thead tr th{
+  padding: 20px;
+  border: 1px solid #D4C8FF;
+  font-weight: normal;
+  color: #283B5C;
+  text-align: center;
+}
+.privacy_row td{
+  padding: 20px;
+  background-color: #F8F6FF;
+  border: 1px solid #D4C8FF;
+}
+.privacy_row ul li a{
+  color: #283B5C;
+  text-decoration: underline;
+}
+/*========================
+    PRIVACY PAGE PART FINISH
+==========================*/
+
+
+
+/*========================
+    CONTACT PAGE PART START
+==========================*/
+
+/*CONTACT PAGE SECTION 1 PART START*/
+.contact-page{}
+.contact-page .contact-top{
+  background-color: #fff;
+  box-shadow: 5px 5px 25px 0px #00000026;
+  padding: 25px 20px;
+}
+.contact-page .contact-top  img{
+  width: 100px;
+  margin-bottom: 20px;
+}
+.contact-page .contact-top  h3{}
+.contact-page .contact-top  p{
+  margin-bottom: 0;
+  color: #717D94;
+}
+.contact-page .contact-top  a{
+  color: #717D94;
+}
+.contact-page .contact-form-left{}
+.contact-page .contact-form-left .contact-top{}
+.contact-page .contact-form-left .contact-top h2{}
+.contact-page .contact-form-left .contact-top p{}
+.contact-page .contact-form-left form{
+  width: 600px;
+}
+.contact-page .contact-form-left form label{
+  display: block;
+  width: 100%;
+  margin-bottom: 25px;
+}
+.contact-page .contact-form-left form select{
+  display: block;
+  width: 100%;
+  margin-bottom: 25px;
+  background-color: #F8F6FF;
+  height: 70px;
+  border: none;
+  padding: 0 30px;
+  border: 1px solid #F2EEFF;
+  color: #717D94;
+  position: relative;
+}
+
+.contact-page .contact-form-left form option{
+  display: block;
+  width: 100%;
+  color: #717D94;
+}
+.contact-page .contact-form-left form input{
+  display: block;
+  width: 100%;
+  margin-bottom: 25px;
+  background-color: transparent;
+  border: 0;
+  border-bottom: 1px solid #F8F6FF;
+  height: 70px;
+  padding-left: 30px;
+}
+.contact-page .contact-form-left form textarea{
+  display: block;
+  width: 100%;
+  margin-bottom: 25px;
+  height: 150px;
+  border: none;
+  resize: none;
+  padding: 20px 30px;
+  background-color: #F8F6FF;
+  border: 1px solid #F2EEFF;
+}
+.contact-page .contact-form-left form button{
+  text-transform: uppercase;
+  display: inline-block;
+  height: 70px;
+  background-color: #3BD499;
+  border: 0;
+  color: #fff;
+  cursor: pointer;
+  padding: 0 50px;
+}
+.contact-page .contact-right-part{
+  background-color: #F8F6FF;
+  padding: 20px;
+  border-top: 5px solid #072039;
+}
+.contact-page .contact-right-part a{
+  font-size: 14px;
+  color: #3BD499;
+}
+.contact-page .contact-right-part p.small-bit{
+  font-weight: normal;
+  font-size: 14px;
+}
+.contact-page .contact-right-part p{
+  font-size: 16px;
+  font-weight: 600;
+}
+.disabled_select{
+  color: #717D94;
+}
+.green{
+  font-weight: 500;
+}
+.bit-larger{
+  font-weight: normal !important;
+  font-size: 16px;
+}
+/*CONTACT PAGE SECTION 1 PART FINISH*/
+
+
+/*========================
+    CONTACT PAGE PART FINISH
+==========================*/
